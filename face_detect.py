@@ -8,6 +8,7 @@ video = cv2.VideoWriter("rec_out.avi", cv2.VideoWriter_fourcc(*'MJPG'), 20, (fra
 while True:
 	ret, frame = cap.read()
 	face, confidence = cv.detect_face(frame)
+	print(face)
 
 
 	for (i, (x, y, w, h)) in enumerate(face):
